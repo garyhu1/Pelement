@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>钉子效果</title>
+		<style type="text/css">
+			.box:before {
+				content: "钉子";
+				color: #FFF;
+				background: #000;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				display: block;
+				text-align: center;
+				line-height: 50px;
+			}
+			/*使用after伪元素画三角*/
+			
+			.box:after {
+				display: block;
+				content: " ";
+				height: 0;
+				width: 0;
+				border: 25px solid transparent;
+				border-top: 50px solid #000;
+				margin-top: -20px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="box"></div>
+	</body>
+
+</html>

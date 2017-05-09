@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>图片叠加效果</title>
+		<style>
+			body {
+				margin: 0;
+			}
+			
+			.box {
+				position: relative;
+				margin: 30px auto 0;
+				width: 300px;
+			}
+			
+			.box-img {
+				position: absolute;
+				z-index: 1;
+				border: 1px solid gray;
+			}
+			
+			.box:before,
+			.box:after {
+				content: "";
+				position: absolute;
+				background: url(../img/image01.jpg);
+				width: 300px;
+				height: 200px;
+				border: 1px solid gray;
+			}
+			
+			.box:before {
+				left: -10px;
+				top: 0;
+				transform: rotate(-5deg);
+			}
+			
+			.box:after {
+				top: 4px;
+				left: 0;
+				transform: rotate(4deg);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="box">
+			<img class="box-img" src="../img/image01.jpg" alt="图片叠加效果">
+		</div>
+	</body>
+
+</html>
