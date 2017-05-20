@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>翻角</title>
+		<style type="text/css">
+			.item {
+				position: relative;
+				width: 240px;
+				height: 320px;
+				background: url(../img/image01.jpg) no-repeat center / 240px 320px;
+				border: 5px solid #fff;
+				margin: 10px auto;
+			}
+			
+			.item::before {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 150px;
+				left: 70px;
+				width: 150px;
+				height: 150px;
+				box-shadow: 5px 5px 15px 10px rgb(213, 213, 213);
+				transform: skewX(20deg) rotate(15deg);
+				z-index: -100;
+			}
+			
+			.item::after {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 18px;
+				left: 12px;
+				width: 150px;
+				height: 150px;
+				box-shadow: 0 0 15px 10px rgba(0, 0, 0, .2);
+				transform: skewX(20deg) rotate(15deg);
+				z-index: -100;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="item"></div>
+	</body>
+
+</html>
